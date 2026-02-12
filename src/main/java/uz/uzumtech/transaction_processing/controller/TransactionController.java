@@ -17,13 +17,13 @@ import uz.uzumtech.transaction_processing.service.TransactionService;
 @RestController
 @Validated
 @RequiredArgsConstructor
-@RequestMapping("api/notification")
+@RequestMapping("api/v1/transactions")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class TransactionController {
     TransactionService notificationService;
 
-    @PostMapping("/sending")
-    public ResponseEntity<TransactionResponse> send(@Valid @RequestBody TransactionRequest request) {
+    @PostMapping()
+    public ResponseEntity<TransactionResponse> create(@Valid @RequestBody TransactionRequest request) {
         TransactionResponse response = notificationService.transfer(request);
         return ResponseEntity.ok(response);
     }
