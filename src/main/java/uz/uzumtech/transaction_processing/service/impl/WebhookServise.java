@@ -3,7 +3,9 @@ package uz.uzumtech.transaction_processing.service.impl;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import lombok.experimental.NonFinal;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
@@ -17,10 +19,12 @@ public class WebhookServise {
 
     RestClient restClient;
 
+    @NonFinal
+    @Value("${spring.webhook.url}")
+    String webhookUri;
+
     @Async
     public void sendCallback(WebhookDto webhookDto) {
-
-        String webhookUri = "http://localhost:8081/api/core/payments/webhook";
 
         try {
             Thread.sleep(5000);
