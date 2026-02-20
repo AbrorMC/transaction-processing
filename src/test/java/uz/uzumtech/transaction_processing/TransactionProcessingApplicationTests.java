@@ -1,4 +1,4 @@
-package uz.uzumtech.notification;
+package uz.uzumtech.transaction_processing;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

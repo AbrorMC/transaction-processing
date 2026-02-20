@@ -12,7 +12,7 @@ public enum TransactionStatus {
     AMOUNT_VALIDATED(false),
     AMOUNT_VALIDATION_FAILED(true),
     CALCULATE_FAILED(true),
-    PROCESSING_BY_LEDGER(true),
+    REFUND(true),
     COMPLETED(true),
     FAILED(true);
 
