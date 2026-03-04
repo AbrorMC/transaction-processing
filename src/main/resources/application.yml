@@ -3,7 +3,7 @@ spring:
     name: transaction-service
 
   webhook:
-    url: "http://localhost:8081/api/v1/retail/payments/webhook"
+    url: "http://localhost:8081/api/v1/retail/orders/webhook"
 
 # Tomcat configuration
 server:
