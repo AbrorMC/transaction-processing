@@ -3,7 +3,10 @@ spring:
     name: transaction-service
 
   webhook:
-    url: "http://localhost:8081/api/core/payments/webhook"
+    url: "http://localhost:8081/api/v1/retail/orders/webhook"
+
+  jackson:
+    property-naming-strategy: SNAKE_CASE
 
 # Tomcat configuration
 server:
