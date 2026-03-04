@@ -17,7 +17,7 @@ import uz.uzumtech.transaction_processing.service.RefundService;
 @RestController
 @Validated
 @RequiredArgsConstructor
-@RequestMapping("api/v1/retail/refunds")
+@RequestMapping("api/v1/refunds")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class RefundController {
     RefundService refundService;
